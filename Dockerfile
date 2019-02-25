@@ -1,4 +1,4 @@
-from nginx:1.14.2-alpine
+FROM nginx:1.14.2-alpine
 
 LABEL maintainer "Carlos Augusto Malucelli <malucellicarlos@gmail.com>"
 
