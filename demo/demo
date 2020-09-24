@@ -1,0 +1,5 @@
+1) curl -sfL https://get.k3s.io | sh -
+3) kubectl create deployment teste --image=k8s.gcr.io/echoserver:1.10
+4) kubectl expose deployment teste --port=80
+5) kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v0.35.0/deploy/static/provider/baremetal/deploy.yaml
+6) aplicar ingress.yaml
