@@ -1,4 +1,5 @@
 1) curl -sfL https://get.k3s.io | sh -
+1.1) curl -LO "https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl"
 3) https://raw.githubusercontent.com/nopp/labs/master/demo/deploy-teste.yaml
 4) https://raw.githubusercontent.com/nopp/labs/master/demo/service-teste.yaml
 5) kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v0.35.0/deploy/static/provider/baremetal/deploy.yaml
