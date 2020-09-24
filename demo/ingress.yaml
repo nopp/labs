@@ -22,5 +22,5 @@ spec:
     http:
       paths:
       - backend:
-          serviceName: hello-minikube
+          serviceName: teste
           servicePort: 8080
