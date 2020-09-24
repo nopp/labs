@@ -1,4 +1,4 @@
-1) curl -sfL https://get.k3s.io | sh -
+1) curl -sfL https://get.k3s.io | INSTALL_K3S_EXEC="server --no-deploy traefik" sh
 2) https://raw.githubusercontent.com/nopp/labs/master/demo/deploy-teste.yaml
 3) https://raw.githubusercontent.com/nopp/labs/master/demo/service-teste.yaml
 4) kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v0.35.0/deploy/static/provider/baremetal/deploy.yaml
