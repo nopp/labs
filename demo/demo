@@ -3,3 +3,4 @@
 4) https://raw.githubusercontent.com/nopp/labs/master/demo/service-teste.yaml
 5) kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v0.35.0/deploy/static/provider/baremetal/deploy.yaml
 6) https://raw.githubusercontent.com/nopp/labs/master/demo/ingress.yaml
+7) Install nginx no node e configurar o proxy_pass para o ipDoNode:portaDoSVCdoIngress
