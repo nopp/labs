@@ -22,5 +22,5 @@ spec:
     http:
       paths:
       - backend:
-          serviceName: teste
+          serviceName: teste-svc
           servicePort: 8080
