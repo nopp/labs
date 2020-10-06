@@ -1,0 +1,26 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    nginx.ingress.kubernetes.io/add-base-url: "true"
+    nginx.ingress.kubernetes.io/configuration-snippet: |
+      more_set_headers "Access-Control-Allow-Origin: $http_origin";
+    nginx.ingress.kubernetes.io/cors-allow-headers: Content-Type,X-Auth-Token
+    nginx.ingress.kubernetes.io/cors-allow-methods: GET, POST, OPTIONS, PUT, DELETE
+    nginx.ingress.kubernetes.io/enable-cors: "true"
+    nginx.ingress.kubernetes.io/proxy-body-size: 100m
+    nginx.ingress.kubernetes.io/rewrite-target: /
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+  generation: 1
+  labels:
+    app.kubernetes.io/name: ingress-nginx
+    app.kubernetes.io/part-of: ingress-nginx
+  name: ingress-nginx
+spec:
+  rules:
+  - host: teste.demo.carlosmalucelli.com
+    http:
+      paths:
+      - backend:
+          serviceName: teste-svc
+          servicePort: 8080
