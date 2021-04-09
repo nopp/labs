@@ -16,5 +16,25 @@ spec:
       containers:
       - image: nginx:1.19.9-alpine
         name: app
+        livenessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /
+            port: 8
+            scheme: HTTP
+          initialDelaySeconds: 15
+          periodSeconds: 5
+          successThreshold: 1
+          timeoutSeconds: 1
+        readinessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /
+            port: 80
+            scheme: HTTP
+          initialDelaySeconds: 15
+          periodSeconds: 5
+          successThreshold: 1
+          timeoutSeconds: 1        
         ports:
         - containerPort: 80
