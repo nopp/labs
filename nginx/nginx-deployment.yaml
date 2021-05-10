@@ -14,7 +14,7 @@ spec:
         app: app
     spec:
       containers:
-      - image: nginx:1.18.0-alpine
+      - image: nginx:1.19.9-alpine
         name: app
         livenessProbe:
           failureThreshold: 3
