@@ -14,8 +14,8 @@ resource "null_resource" "example" {
   }
   provisioner "local-exec" {
     command = <<EOT
-      "uname -a"
       "echo ${local.opa} > /tmp/test"
+      "uname -a"
     EOT
   }
 }
