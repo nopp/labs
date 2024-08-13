@@ -13,9 +13,10 @@ resource "null_resource" "example" {
     id = data.null_data_source.values.outputs["all_server_ips"]
   }
   provisioner "local-exec" {
-    command = <<EOT
-      "echo ${local.opa} > /tmp/test"
-      "uname -a"
-    EOT
+    working_dir = "/tmp"
+    command = "echo ${local.opa} > test"
+  }
+  provisioner "local-exec" {
+    command = "uname -a"
   }
 }
