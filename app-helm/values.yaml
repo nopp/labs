@@ -5,10 +5,10 @@
 replicaCount: 1
 
 image:
-  repository: nginx:1.27.3-otel
+  repository: nginx
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: ""
+  tag: "1.27.3-otel"
 
 nameOverride: ""
 fullnameOverride: ""
